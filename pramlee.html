@@ -46,16 +46,36 @@
     <header class="hero pramlee-hero">
         <div class="hero-content">
             <h1 class="fade-in-up">Seniman Agung</h1>
-            <p class="subtitle fade-in-up delay-1">Tan Sri P. Ramlee</p>
-            <p class="hero-desc fade-in-up delay-2">The unparalleled genius of Malay cinema and music.</p>
-            <div class="scroll-indicator fade-in-up delay-3">
-                <span>SCROLL TO EXPLORE</span>
-                <div class="line"></div>
-            </div>
+            <p class="fade-in-up delay-1">Tan Sri P. Ramlee</p>
+            <p class="fade-in-up delay-2" style="font-size: 1.2rem; margin-top: 1rem; font-style: italic; color: #ccc;">The unparalleled genius of Malay cinema and music.</p>
+            <a href="#numbers" class="scroll-indicator fade-in-up delay-3" style="text-decoration: none;">
+                <span>Scroll to explore</span>
+                <div class="arrow-down"></div>
+            </a>
         </div>
     </header>
 
     <main>
+        <!-- The Master's Numbers -->
+        <section id="numbers" class="numbers-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="66">0</span>
+                        <span class="stat-label">Films Directed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="390">0</span><span class="stat-plus" style="font-size: 3rem; color: var(--accent-gold); font-weight: bold;">+</span>
+                        <span class="stat-label">Songs Composed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="35">0</span>
+                        <span class="stat-label">Films Starred In</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="legend" class="composer-section">
             <div class="container">
                 <div class="composer-grid">
@@ -307,6 +327,74 @@
                         <h3>Puan Sri Saloma</h3>
                         <p style="font-weight: 500; margin-bottom: 1rem;">The Primadona of Malay Cinema</p>
                         <p style="font-style: normal; text-align: justify; color: var(--text-primary); line-height: 1.6;">Born Salmah binti Ismail, Saloma was not just P. Ramlee's beloved wife, but his greatest muse and musical partner. Their iconic duets, such as <i>Malam Ku Bermimpi</i> and <i>Saat Yang Bahagia</i>, defined the romantic era of the 1960s. Her signature vocal style and trendsetting fashion made her the undisputed Queen of Asian Jazz and the perfect counterpart to Seniman Agung's genius.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Trophy Room -->
+        <section id="trophy-room" class="trophy-section">
+            <div class="container">
+                <h2 class="section-title fade-in-up" style="text-align: center;">The Trophy Room</h2>
+                <p class="section-subtitle fade-in-up delay-1" style="text-align: center; margin-bottom: 4rem;">His genius recognized on the international stage.</p>
+                <div class="trophy-grid">
+                    <div class="trophy-card fade-in-up delay-1">
+                        <div class="trophy-icon">🏆</div>
+                        <h3>Best Actor</h3>
+                        <p>4th Asian Film Festival, Tokyo (1957)</p>
+                        <span class="trophy-film">Anak-ku Sazali</span>
+                    </div>
+                    <div class="trophy-card fade-in-up delay-2">
+                        <div class="trophy-icon">🏆</div>
+                        <h3>Best Comedy Film</h3>
+                        <p>6th Asian Film Festival, Kuala Lumpur (1959)</p>
+                        <span class="trophy-film">Pendekar Bujang Lapok</span>
+                    </div>
+                    <div class="trophy-card fade-in-up delay-3">
+                        <div class="trophy-icon">🏆</div>
+                        <h3>Most Versatile Talent</h3>
+                        <p>10th Asian Film Festival, Tokyo (1963)</p>
+                        <span class="trophy-film">Ibu Mertuaku</span>
+                    </div>
+                    <div class="trophy-card fade-in-up delay-4">
+                        <div class="trophy-icon">🎖️</div>
+                        <h3>Tan Sri</h3>
+                        <p>Posthumous Royal Honour (1990)</p>
+                        <span class="trophy-film">Panglima Setia Mahkota</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footsteps of the Legend -->
+        <section id="pramlee-journeys" class="journeys-section">
+            <div class="container">
+                <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 4rem;">Footsteps of the Legend</h2>
+                <div class="map-container fade-in-up delay-1" style="background: #111; overflow: hidden;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Southeast_Asia_location_map.svg" alt="Map of Southeast Asia" class="sea-map" style="width: 100%; height: auto; opacity: 0.15; filter: sepia(1) hue-rotate(-30deg);">
+                    
+                    <div class="map-pin" style="top: 35%; left: 35%;" data-city="Penang">
+                        <div class="pin-dot"></div>
+                        <div class="pin-card">
+                            <h4>Penang</h4>
+                            <p>His birthplace, where his musical journey began playing the ukulele and violin.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-pin" style="top: 55%; left: 45%;" data-city="Kuala Lumpur">
+                        <div class="pin-dot"></div>
+                        <div class="pin-card">
+                            <h4>Kuala Lumpur</h4>
+                            <p>Studio Merdeka. His final years directing and acting to keep the industry alive.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-pin" style="top: 70%; left: 55%;" data-city="Singapore">
+                        <div class="pin-dot"></div>
+                        <div class="pin-card">
+                            <h4>Singapore</h4>
+                            <p>Studio Jalan Ampas. The golden era of Malay cinema where he created his greatest masterpieces.</p>
+                        </div>
                     </div>
                 </div>
             </div>

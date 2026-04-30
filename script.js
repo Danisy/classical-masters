@@ -195,4 +195,40 @@ document.addEventListener("DOMContentLoaded", () => {
             startCarousel();
         });
     });
+
+    // Stat Counters Animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasCounted = false;
+
+    const animateCounters = () => {
+        statNumbers.forEach(stat => {
+            const target = +stat.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            
+            let current = 0;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    stat.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    stat.innerText = target;
+                }
+            };
+            updateCounter();
+        });
+    };
+
+    const numbersSection = document.querySelector('.numbers-section');
+    if (numbersSection) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !hasCounted) {
+                hasCounted = true;
+                animateCounters();
+            }
+        }, { threshold: 0.5 });
+        observer.observe(numbersSection);
+    }
+
 });
