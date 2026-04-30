@@ -1719,8 +1719,8 @@ footer p {
 
     /* Quotes Carousel Optimization */
     .carousel-container {
-        padding: 2rem 1rem;
-        min-height: 250px;
+        padding: 2rem 1rem 3.5rem 1rem;
+        min-height: 380px;
     }
     
     .quote-slide {
@@ -1737,7 +1737,7 @@ footer p {
     }
     
     .carousel-nav {
-        bottom: 1rem;
+        bottom: 0.8rem;
     }
     
     /* Manuscripts Optimization */
