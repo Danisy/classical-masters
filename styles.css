@@ -859,7 +859,7 @@ footer p {
     backdrop-filter: blur(10px);
 }
 
-.hotspot:hover::after {
+.hotspot:hover::after, .hotspot.active::after {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -909,7 +909,7 @@ footer p {
     transition: transform 0.3s ease;
 }
 
-.map-pin:hover .pin-dot {
+.map-pin:hover .pin-dot, .map-pin.active .pin-dot {
     transform: scale(1.5);
     background: var(--accent-gold);
 }
@@ -932,7 +932,7 @@ footer p {
     backdrop-filter: blur(10px);
 }
 
-.map-pin:hover .pin-card {
+.map-pin:hover .pin-card, .map-pin.active .pin-card {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);

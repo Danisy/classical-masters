@@ -30,6 +30,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+    // --- Video Autoplay Fallback (iOS Low Power Mode) ---
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        document.body.addEventListener('touchstart', () => {
+            if (heroVideo.paused) {
+                heroVideo.play().catch(e => console.log('Video play prevented:', e));
+            }
+        }, { once: true });
+    }
+
+    // --- Mobile Tooltip Toggle ---
+    const tooltips = document.querySelectorAll('.hotspot, .map-pin');
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('click', function(e) {
+            // Close all other tooltips first
+            tooltips.forEach(t => {
+                if(t !== this) t.classList.remove('active');
+            });
+            this.classList.toggle('active');
+            e.stopPropagation();
+        });
+    });
+
+    // Close tooltips when clicking anywhere else on the document
+    document.addEventListener('click', () => {
+        tooltips.forEach(t => t.classList.remove('active'));
+    });
 
     // --- Scroll Animations ---
     const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
