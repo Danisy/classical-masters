@@ -28,7 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.documentElement.setAttribute('data-theme', 'classical');
                 themeLabel.textContent = 'Classical';
             }
-        });
+    }
+
+    // --- Sidebar Toggle ---
+    const burgerMenu = document.getElementById('burger-menu');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebarBtn = document.getElementById('close-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    if (burgerMenu && sidebar && closeSidebarBtn && sidebarOverlay) {
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('active');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+        }
+
+        burgerMenu.addEventListener('click', openSidebar);
+        closeSidebarBtn.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
     }
     // --- Video Autoplay Fallback (iOS Low Power Mode) ---
     const heroVideo = document.querySelector('.hero-video');
