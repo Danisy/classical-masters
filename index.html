@@ -3,348 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A premium exploration of the lives and works of Wolfgang Amadeus Mozart and Ludwig van Beethoven.">
-    <title>Masters of the Classical Era</title>
+    <title>Legendary Eras - Choose Your Journey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Preloader -->
-    <div id="preloader" class="preloader">
-        <div class="loader-content">
-            <div class="baton"></div>
-            <div class="loader-text">Preparing the Concert Hall...</div>
-        </div>
+<body class="landing-body">
+    
+    <div class="split-container">
+        <!-- Classical Masters Half -->
+        <a href="classical.html" class="split-half classical-half">
+            <div class="split-overlay"></div>
+            <div class="split-content">
+                <h2>Classical Masters</h2>
+                <p>Mozart & Beethoven</p>
+                <span class="enter-btn">Enter Portal</span>
+            </div>
+        </a>
+
+        <!-- Seniman Agung Half -->
+        <a href="pramlee.html" class="split-half pramlee-half">
+            <div class="split-overlay"></div>
+            <div class="split-content">
+                <h2>Seniman Agung</h2>
+                <p>Tan Sri P. Ramlee</p>
+                <span class="enter-btn">Enter Portal</span>
+            </div>
+        </a>
+        
+        <!-- Center Logo/Text -->
+        <div class="center-brand">LEGENDARY ERAS</div>
     </div>
 
-    <!-- Off-canvas Sidebar -->
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
-    <div id="sidebar" class="sidebar">
-        <button id="close-sidebar" class="close-sidebar">&times;</button>
-        <div class="sidebar-brand">Legendary Eras</div>
-        <ul class="sidebar-nav">
-            <li><a href="index.html" class="active">Classical Masters</a></li>
-            <li><a href="pramlee.html">Seniman Agung</a></li>
-        </ul>
-    </div>
-
-    <nav class="navbar">
-        <button id="burger-menu" class="burger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="nav-brand">M & B</div>
-        <ul class="nav-links">
-            <li><a href="#mozart">W.A. Mozart</a></li>
-            <li><a href="#beethoven">L.V. Beethoven</a></li>
-            <li><a href="#manuscripts">Manuscripts</a></li>
-            <li><a href="#quotes">Quotes</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#journeys">Journeys</a></li>
-            <li><a href="#legacy">The Legacy</a></li>
-        </ul>
-        <div class="theme-toggle" id="theme-toggle">
-            <span class="theme-label">Romantic</span>
-            <div class="toggle-track">
-                <div class="toggle-thumb"></div>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="https://upload.wikimedia.org/wikipedia/commons/b/ba/MYA_Symphony_Orchestra-_Symphonie_Fanstastique_I_Reveries%2C_Passions.webm" type="video/webm">
-        </video>
-        <div class="hero-content">
-            <h1 class="fade-in-up">Masters of the Classical Era</h1>
-            <p class="fade-in-up delay-1">Discover the genius of Wolfgang Amadeus Mozart and Ludwig van Beethoven.</p>
-            <a href="#mozart" class="scroll-indicator fade-in-up delay-2" style="text-decoration: none;">
-                <span>Scroll to explore</span>
-                <div class="arrow-down"></div>
-            </a>
-        </div>
-    </header>
-
-    <main>
-        <section id="mozart" class="composer-section">
-            <div class="sheet-music-bg mozart-sheet"></div>
-            <div class="container">
-                <div class="composer-grid">
-                    <div class="composer-image slide-in-left">
-                        <!-- Using the famous portrait of Mozart in a red coat by Barbara Krafft -->
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Wolfgang-amadeus-mozart_1.jpg" alt="Portrait of Wolfgang Amadeus Mozart in a red coat">
-                        <div class="image-glow gold-glow"></div>
-                    </div>
-                    <div class="composer-content slide-in-right">
-                        <h2>Wolfgang Amadeus <span>Mozart</span></h2>
-                        <div class="lifespan">1756 - 1791</div>
-                        <p>A child prodigy who redefined classical music, Wolfgang Amadeus Mozart composed over 800 works across every musical genre of his time. His music is revered for its melodic beauty, formal perfection, and profound emotional resonance.</p>
-                        
-                        <div class="audio-player">
-                            <div class="audio-info">
-                                <strong>Eine kleine Nachtmusik</strong>
-                                <span>Allegro</span>
-                            </div>
-                            <audio controls preload="none">
-                                <source src="https://upload.wikimedia.org/wikipedia/commons/2/24/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        <div class="key-works">
-                            <h3>Honoured Works</h3>
-                            <ul>
-                                <li>Requiem in D minor</li>
-                                <li>The Magic Flute</li>
-                                <li>Symphony No. 40 in G minor</li>
-                                <li>Piano Concerto No. 21</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="beethoven" class="composer-section dark-alt">
-            <div class="sheet-music-bg beethoven-sheet"></div>
-            <div class="container">
-                <div class="composer-grid reverse">
-                    <div class="composer-image slide-in-right">
-                        <!-- Using the famous portrait of Beethoven by Joseph Karl Stieler -->
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg" alt="Portrait of Ludwig van Beethoven with a red scarf">
-                        <div class="image-glow crimson-glow"></div>
-                    </div>
-                    <div class="composer-content slide-in-left">
-                        <h2>Ludwig van <span>Beethoven</span></h2>
-                        <div class="lifespan">1770 - 1827</div>
-                        <p>A revolutionary figure who bridged the Classical and Romantic eras, Beethoven expanded the scope and emotional power of music. Despite his profound struggle with deafness, he created some of the most triumphant and complex works in human history.</p>
-                        
-                        <div class="audio-player">
-                            <div class="audio-info">
-                                <strong>Symphony No. 9 "Choral"</strong>
-                                <span>IV. Ode to Joy (Presto)</span>
-                            </div>
-                            <audio controls preload="none">
-                                <source src="Beethoven Symphony No. 9 in D Minor, Op. 125 Choral IV. (a) Presto - Allegro assai.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-
-                        <div class="key-works">
-                            <h3>Honoured Works</h3>
-                            <ul>
-                                <li>Symphony No. 9 "Choral"</li>
-                                <li>Piano Sonata No. 14 "Moonlight"</li>
-                                <li>Symphony No. 5 in C minor</li>
-                                <li>Fidelio (His only opera)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="manuscripts" class="manuscripts-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 4rem;">Behind the Music</h2>
-                <div class="manuscripts-grid">
-                    <div class="manuscript-card slide-in-left">
-                        <h3>Mozart's Perfection</h3>
-                        <div class="manuscript-image-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Mozart_Coronation_Mass_K317_manuscript_first_page.png" alt="Mozart Manuscript">
-                            <div class="hotspot" style="top: 30%; left: 40%;" data-tooltip="Flawless drafts: Mozart composed entirely in his head before writing a single note."></div>
-                            <div class="hotspot" style="top: 60%; left: 70%;" data-tooltip="No cross-outs: His original manuscripts look like clean, final copies."></div>
-                        </div>
-                    </div>
-                    <div class="manuscript-card slide-in-right">
-                        <h3>Beethoven's Struggle</h3>
-                        <div class="manuscript-image-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Beethoven_opus_101_manuscript.jpg" alt="Beethoven Manuscript">
-                            <div class="hotspot" style="top: 40%; left: 30%;" data-tooltip="Violent edits: Beethoven famously scrubbed holes in the paper when revising."></div>
-                            <div class="hotspot" style="top: 70%; left: 60%;" data-tooltip="Organized chaos: His genius was born through intense, agonizing revision."></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="quotes" class="quotes-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 3rem;">The Masters' Words</h2>
-                <div class="carousel-container fade-in-up delay-1">
-                    <div class="quote-slide active">
-                        <blockquote>"The music is not in the notes, but in the silence between."</blockquote>
-                        <div class="quote-author">— Wolfgang Amadeus Mozart</div>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"To play a wrong note is insignificant; to play without passion is inexcusable."</blockquote>
-                        <div class="quote-author">— Ludwig van Beethoven</div>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"I pay no attention whatever to anybody's praise or blame. I simply follow my own feelings."</blockquote>
-                        <div class="quote-author">— Wolfgang Amadeus Mozart</div>
-                    </div>
-                    <div class="quote-slide">
-                        <blockquote>"Music is a higher revelation than all wisdom and philosophy."</blockquote>
-                        <div class="quote-author">— Ludwig van Beethoven</div>
-                    </div>
-                    
-                    <div class="carousel-nav">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                        <span class="dot" data-index="3"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="timeline" class="timeline-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 4rem;">The Masters' Timeline</h2>
-                <div class="timeline">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-item left slide-in-left">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1756</h3>
-                            <p>Wolfgang Amadeus Mozart is born in Salzburg, Austria. He begins playing the keyboard at age three.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right slide-in-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1770</h3>
-                            <p>Ludwig van Beethoven is born in Bonn, Germany. His early talent is recognized, and he soon supports his family as a musician.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item left slide-in-left">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1781</h3>
-                            <p>Mozart moves to Vienna. He enters his most productive period, achieving fame as a composer, performer, and teacher.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item left slide-in-left">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1791</h3>
-                            <p>Mozart composes masterpieces like <i>The Magic Flute</i> and his unfinished <i>Requiem</i> before his tragic death at age 35.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right slide-in-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1804</h3>
-                            <p>Beethoven's <i>Symphony No. 3 (Eroica)</i> premieres. This massive, complex work shatters classical conventions and heralds the Romantic era.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right slide-in-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1824</h3>
-                            <p>Profoundly deaf, Beethoven premieres his monumental <i>Symphony No. 9</i>, introducing a chorus into a symphony for the first time.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right slide-in-right">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>1827</h3>
-                            <p>Beethoven dies in Vienna, leaving a legacy that bridges two eras and influences all classical music that followed.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="journeys" class="journeys-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 4rem;">The Masters' Journeys</h2>
-                <div class="map-container fade-in-up delay-1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Blank_Europe_Map.svg" alt="Map of Europe" class="europe-map">
-                    
-                    <div class="map-pin" style="top: 61%; left: 41%;" data-city="Paris">
-                        <div class="pin-dot"></div>
-                        <div class="pin-card">
-                            <h4>Paris</h4>
-                            <p>Mozart performed here as a child prodigy, dazzling the French court.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="map-pin" style="top: 56%; left: 38%;" data-city="London">
-                        <div class="pin-dot"></div>
-                        <div class="pin-card">
-                            <h4>London</h4>
-                            <p>Mozart studied under Johann Christian Bach during his family's grand tour.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="map-pin" style="top: 53%; left: 49%;" data-city="Bonn">
-                        <div class="pin-dot"></div>
-                        <div class="pin-card">
-                            <h4>Bonn</h4>
-                            <p>Beethoven's birthplace. He played viola in the electoral orchestra here.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="map-pin" style="top: 59%; left: 52%;" data-city="Vienna">
-                        <div class="pin-dot"></div>
-                        <div class="pin-card">
-                            <h4>Vienna</h4>
-                            <p>The musical capital. Both composers moved here, achieving their greatest fame.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="map-pin" style="top: 61%; left: 51%;" data-city="Salzburg">
-                        <div class="pin-dot"></div>
-                        <div class="pin-card">
-                            <h4>Salzburg</h4>
-                            <p>Mozart's birthplace. He served the Prince-Archbishop here before fleeing to Vienna.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="legacy" class="legacy-section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">The Classical Legacy</h2>
-                <p class="section-subtitle fade-in-up delay-1">How they shaped the art forms we revere today.</p>
-                
-                <div class="legacy-grid">
-                    <div class="legacy-card fade-in-up delay-1">
-                        <h3>The Symphony</h3>
-                        <p>Mozart brought exquisite grace and complex development to the symphony, while Beethoven dramatically expanded its length, orchestration, and emotional depth, transforming it into a vehicle for profound philosophical expression.</p>
-                    </div>
-                    <div class="legacy-card fade-in-up delay-2">
-                        <h3>The Concerto</h3>
-                        <p>Mozart practically invented the modern piano concerto, balancing the soloist and orchestra perfectly. Beethoven infused the concerto with heroic struggle, demanding unprecedented virtuosity from the soloist.</p>
-                    </div>
-                    <div class="legacy-card fade-in-up delay-3">
-                        <h3>The Sonata Form</h3>
-                        <p>The structural backbone of the era. Mozart mastered its elegant proportions and conversational interplay, whereas Beethoven broke its rules, stretching the development sections to explore dramatic psychological landscapes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Masters of the Classical Era. A tribute to Wolfgang Amadeus Mozart and Ludwig van Beethoven.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

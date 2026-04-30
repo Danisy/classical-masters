@@ -297,6 +297,155 @@
     box-sizing: border-box;
 }
 
+/* --- Landing Page Split Screen --- */
+.landing-body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.split-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.split-half {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-size: cover;
+    background-position: center;
+}
+
+.classical-half {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Beethoven_opus_101_manuscript.jpg');
+}
+
+.pramlee-half {
+    background-image: url('assets/pramlee-hero.png');
+    background-position: right center;
+}
+
+.split-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 10, 0.7);
+    transition: var(--transition-smooth);
+    z-index: 1;
+}
+
+.split-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+    padding: 2rem;
+}
+
+.split-content h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.split-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #ccc;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+.enter-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Effects */
+.split-half:hover {
+    flex: 1.3;
+}
+
+.split-half:hover .split-overlay {
+    background: rgba(10, 10, 10, 0.3);
+}
+
+.split-half:hover .split-content {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.split-half:hover .enter-btn {
+    opacity: 1;
+    transform: translateY(0);
+    background: rgba(194, 168, 120, 0.2);
+}
+
+/* Center Brand */
+.center-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: #000;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    letter-spacing: 4px;
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* Mobile Stacking */
+@media (max-width: 768px) {
+    .landing-body {
+        overflow-y: auto;
+    }
+    .split-container {
+        flex-direction: column;
+    }
+    .split-half:hover {
+        flex: 1;
+    }
+    .center-brand {
+        display: none;
+    }
+    .split-content h2 {
+        font-size: 2.2rem;
+    }
+    .enter-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
