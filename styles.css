@@ -326,7 +326,27 @@
 }
 
 .classical-half {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Beethoven_opus_101_manuscript.jpg');
+    background-color: #000;
+}
+
+.split-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    z-index: 0;
+}
+
+.mozart-bg {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Wolfgang-amadeus-mozart_1.jpg');
+    background-position: 35% 20%;
+}
+
+.beethoven-bg {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg');
+    background-position: 65% 20%;
+    -webkit-mask-image: linear-gradient(to right, transparent 30%, black 70%);
+    mask-image: linear-gradient(to right, transparent 30%, black 70%);
 }
 
 .pramlee-half {
