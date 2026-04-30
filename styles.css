@@ -39,12 +39,256 @@
 }
 
 [data-theme="pramlee"] .pramlee-hero {
-    background: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 1)), url('https://upload.wikimedia.org/wikipedia/commons/b/bd/P._Ramlee_1.jpg') center/cover;
+    background: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 1)), url('assets/pramlee-hero.png') center/cover;
     background-attachment: fixed;
+}
+
+/* Vintage Audio Player */
+.vintage-player {
+    background: linear-gradient(145deg, #1f1f1f, #121212);
+    border: 1px solid var(--accent-gold);
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 10px 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.vintage-player::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.02) 2px,
+      rgba(255, 255, 255, 0.02) 4px
+    );
+    pointer-events: none;
+}
+
+/* Trio Flip Cards */
+.trio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.trio-card {
+    background-color: transparent;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.trio-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.trio-card.flipped .trio-card-inner {
+    transform: rotateY(180deg);
+}
+
+.trio-front, .trio-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid var(--accent-gold);
+}
+
+.trio-front {
+    background: linear-gradient(145deg, #1f1f1f, #121212);
+}
+
+.trio-back {
+    background: #0a0a0a;
+    transform: rotateY(180deg);
+}
+
+.trio-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--accent-gold);
+    filter: grayscale(100%) sepia(80%) contrast(120%);
+}
+
+.trio-back h3 {
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+.trio-back p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Leading Ladies */
+.ladies-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.lady-card {
+    text-align: center;
+    width: 250px;
+}
+
+.lady-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    background-size: cover;
+    background-position: center top;
+    border: 4px solid var(--accent-gold);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+    filter: grayscale(80%) sepia(40%) contrast(110%);
+    transition: var(--transition-smooth);
+}
+
+.lady-card:hover .lady-image {
+    transform: scale(1.05);
+    filter: grayscale(0%) sepia(20%);
+    box-shadow: 0 0 25px var(--accent-gold);
+}
+
+.lady-card h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.lady-card p {
+    color: var(--text-secondary);
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 [data-theme="pramlee"] .composer-image img {
     filter: grayscale(100%) sepia(30%) contrast(120%);
+}
+
+/* Filmstrip Gallery */
+.filmstrip-container {
+    background: #0a0a0a;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.filmstrip-edge {
+    height: 24px;
+    background-image: radial-gradient(circle, transparent 4px, #0a0a0a 5px);
+    background-size: 30px 24px;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+}
+
+.filmstrip-edge.top { top: 0; }
+.filmstrip-edge.bottom { bottom: 0; }
+
+.filmstrip-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 0 1rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+.filmstrip-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.film-frame {
+    flex: 0 0 300px;
+    height: 400px;
+    background: #fff;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.film-frame:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 0 20px var(--accent-gold);
+}
+
+.frame-content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    filter: grayscale(100%) sepia(40%) contrast(120%);
+    transition: var(--transition-smooth);
+}
+
+.film-frame:hover .frame-content {
+    filter: grayscale(0%) sepia(10%);
+}
+
+.frame-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 2rem 1rem 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition-smooth);
+}
+
+.film-frame:hover .frame-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.frame-overlay h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.frame-overlay p {
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 * {
