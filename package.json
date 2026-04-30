@@ -1,0 +1,29 @@
+{
+  "name": "classical-masters",
+  "version": "1.0.0",
+  "description": "A premium exploration of the lives and works of Wolfgang Amadeus Mozart, Ludwig van Beethoven, and P. Ramlee",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danisy/classical-masters.git"
+  },
+  "keywords": [
+    "classical-music",
+    "mozart",
+    "beethoven",
+    "p-ramlee",
+    "music-history"
+  ],
+  "author": "Danisy Ahnaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danisy/classical-masters/issues"
+  },
+  "homepage": "https://github.com/Danisy/classical-masters#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
