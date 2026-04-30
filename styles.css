@@ -1548,7 +1548,9 @@ footer p {
 /* Edge Case Positioning for P. Ramlee Map */
 .map-pin[data-city="Penang"] .pin-card {
     left: 0;
-    transform: translateX(-10px) translateY(10px);
+    bottom: auto;
+    top: 150%;
+    transform: translateX(-10px) translateY(-10px);
 }
 .map-pin[data-city="Penang"]:hover .pin-card, .map-pin[data-city="Penang"].active .pin-card {
     transform: translateX(-10px) translateY(0);
