@@ -800,9 +800,8 @@ footer p {
 .manuscript-image-container {
     position: relative;
     width: 100%;
-    border-radius: 4px;
-    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 4px;
 }
 
 .manuscript-image-container img {
@@ -810,6 +809,7 @@ footer p {
     display: block;
     filter: sepia(30%) contrast(110%);
     transition: var(--transition-smooth);
+    border-radius: 4px;
 }
 
 [data-theme="classical"] .manuscript-image-container img {
@@ -876,7 +876,6 @@ footer p {
     max-width: 800px;
     margin: 0 auto;
     border-radius: 12px;
-    overflow: hidden;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
 }
@@ -887,6 +886,7 @@ footer p {
     opacity: 0.2;
     filter: invert(1);
     transition: var(--transition-smooth);
+    border-radius: 12px;
 }
 
 [data-theme="classical"] .europe-map {
