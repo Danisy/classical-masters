@@ -1545,6 +1545,24 @@ footer p {
     font-size: 1.2rem;
 }
 
+/* Edge Case Positioning for P. Ramlee Map */
+.map-pin[data-city="Penang"] .pin-card {
+    left: 0;
+    transform: translateX(-10px) translateY(10px);
+}
+.map-pin[data-city="Penang"]:hover .pin-card, .map-pin[data-city="Penang"].active .pin-card {
+    transform: translateX(-10px) translateY(0);
+}
+
+.map-pin[data-city="Singapore"] .pin-card {
+    left: auto;
+    right: 0;
+    transform: translateX(10px) translateY(10px);
+}
+.map-pin[data-city="Singapore"]:hover .pin-card, .map-pin[data-city="Singapore"].active .pin-card {
+    transform: translateX(10px) translateY(0);
+}
+
 .pin-card p {
     color: var(--text-primary);
     font-size: 0.85rem;
