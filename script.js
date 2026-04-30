@@ -258,4 +258,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // --- Smooth Page Transitions ---
+    const transitionLinks = document.querySelectorAll('a[href="index.html"], a[href="classical.html"], a[href="pramlee.html"]');
+    
+    transitionLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetUrl = this.getAttribute('href');
+            
+            const preloader = document.getElementById('preloader');
+            
+            if (preloader) {
+                // Fade out using the existing preloader overlay
+                const loaderText = preloader.querySelector('.loader-text');
+                if (loaderText) {
+                    if (targetUrl === 'index.html') {
+                        loaderText.innerText = "Returning to the Hall of Legends...";
+                    } else if (targetUrl === 'classical.html') {
+                        loaderText.innerText = "Traveling to the Classical Era...";
+                    } else if (targetUrl === 'pramlee.html') {
+                        loaderText.innerText = "Traveling to Studio Jalan Ampas...";
+                    }
+                }
+                preloader.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 800);
+            } else {
+                // Fade out the entire body for index.html
+                document.body.style.transition = "opacity 0.8s ease-out";
+                document.body.style.opacity = "0";
+                
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 800);
+            }
+        });
+    });
+
 });
