@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.documentElement.setAttribute('data-theme', 'classical');
                 themeLabel.textContent = 'Classical';
             }
+        });
     }
 
     // --- Sidebar Toggle ---
