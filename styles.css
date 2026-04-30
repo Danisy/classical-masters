@@ -589,8 +589,8 @@ html {
     width: 100%;
     padding: 1.5rem 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     z-index: 1000;
     background: var(--nav-bg);
     backdrop-filter: blur(10px);
@@ -604,6 +604,8 @@ html {
     font-weight: 700;
     color: var(--accent-gold);
     letter-spacing: 1px;
+    margin-right: auto;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -620,6 +622,7 @@ html {
     letter-spacing: 2px;
     transition: var(--transition-smooth);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -652,6 +655,7 @@ html {
     border: none;
     cursor: pointer;
     z-index: 1001;
+    flex-shrink: 0;
 }
 
 .burger-menu span {
@@ -1646,15 +1650,36 @@ footer p {
         padding: 1rem 5%;
     }
     
+    /* Navbar Mobile Optimization */
+    .navbar {
+        padding: 1rem 5%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
     .nav-links {
         display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 100%;
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+    
+    .nav-links::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .theme-toggle {
+        margin-left: auto;
     }
     
     .nav-links a {
         font-size: 0.8rem;
+        white-space: nowrap;
     }
 
     /* Hero Section */
