@@ -43,6 +43,19 @@
     background-attachment: fixed;
 }
 
+/* iOS Safari Fix for background-attachment: fixed */
+@supports (-webkit-touch-callout: none) {
+    [data-theme="pramlee"] .pramlee-hero {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    [data-theme="pramlee"] .pramlee-hero {
+        background-attachment: scroll;
+    }
+}
+
 /* Vintage Audio Player */
 .vintage-player {
     background: linear-gradient(145deg, #1f1f1f, #121212);
