@@ -408,7 +408,29 @@ Menjagamu wahai Sazali
 Anakku Sazali dengarlah
 Lagu yang ayahanda karangi
 Sifatkan laguku hai anak
-Sebagai sahabatmu nanti`
+Sebagai sahabatmu nanti`,
+
+        "Nak Dara Rindu": `Di waktu malam bulan mengambang
+Sunyi damai, hai, damai sekelilingku
+Terdengar nan sayu bintang seribu
+Membujuk rayu kerna merindu
+Lagu yang dulu
+
+Di waktu malam bulan purnama
+Angin laut meniup-niup tenang
+Mengatakan sayang, berlagu merdu
+Bermadah sayu, lemah mendayu
+Nak dara rindu
+
+Tanjung Katung airnya biru
+Tempat mandi nak dara jelita
+Sama sekampung, hai, sedang dirindu
+Ini kan lagi, hai, jauh di mata
+
+Tanjung Katung airnya biru
+Tempat mandi nak dara jelita
+Sama sekampung, hai, sedang dirindu
+Ini kan lagi, hai, jauh di mata`
     };
 
     const lyricsModal = document.getElementById('lyrics-modal');
