@@ -307,4 +307,151 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // --- Lyrics Modal Logic ---
+    const lyricsData = {
+        "Getaran Jiwa": `Getaran jiwa melanda hatiku
+Tersusun nada, irama dan lagu
+Walau hanya sederhana
+Tetapi tak mengapa
+Moga dapat membangkitkan
+Sedarlah kamu wahai insan
+
+Tak mungkin hilang
+Irama dan lagu
+Bagaikan kembang
+Sentiasa bermadu
+Andai dipisah lagu dan irama
+Lemah tiada berjiwa, hampa`,
+
+        "Di Mana Kan Ku Cari Ganti": `Hendak ku nangis
+Tiada berair mata
+Hendak ku senyum
+Tiada siapa nak teman
+
+Kalaulah nasib
+Sudah tersurat
+Begini hebat
+Apa nak buat
+
+Di mana kan ku cari ganti
+Serupa denganmu
+Tak sanggup ku berpisah
+Dan berhati patah, hidup gelisah
+
+Alangkah pedih rasa hati
+Selama kau pergi
+Tinggalkan sendirian
+Tiada berteman dalam kesepian
+
+Dunia terang menjadi gelita
+Cahaya indah tiada bergema
+Keluhan hatiku membawa derita
+Kini kau jua tak kunjung jelma
+
+Di mana kan ku cari ganti
+Mungkinkah di syurga
+Untuk kawan berduka
+Menangis bersama, selama-lamanya`,
+
+        "Tunggu Sekejap": `Tunggu sekejap wahai kasih
+Kerana hujan masih renyai
+Tunggu sekejap dalam pelukan asmaraku
+Jangan bimbang walaupun siang akan menjelma malam
+
+Belum puas ku bercumbu dengan dinda
+Tunggu sekejap wahai kasih
+Tunggulah sampai hujan teduh
+Mari ku dendang, jangan mengenang orang jauh
+Jangan pulang, jangan tinggalkan daku seorang
+Tunggu sekejap kasih, tunggu`,
+
+        "Menceceh Bujang Lapok": `Oh menceceh, menceceh, menceceh, menceceh, menceceh
+Oh menceceh, menceceh, menceceh, menceceh, menceceh
+
+Bujang lapuk pakai songkok
+Basikal cabuk tak pernah gosok
+Tayar kempis roda bengkok
+Badan pepes macam keropok
+
+Bujang lapuk keliling kampung
+Naik basikal hai pakai sarung
+Minum air dah naik kembung
+Sakit perut terpekik terlolong
+
+Hai bujang lapuk tak boleh harap
+Basikal cabuk dah naik kurap
+Baru putus hai urat saraf
+Masuk angin keluar asap
+
+Bujang lapuk loyar buruk
+Sana sini hai bikin sibuk
+Naik basikal semacam beruk
+Tak ada kerja tolak habuk`,
+
+        "Anakku Sazali": `Anakku Sazali dengarlah
+Lagu yang ayahanda karangi
+Sifatkan laguku hai anak
+Sebagai sahabatmu nanti
+
+Anakku Sazali juwita
+Laguku jadikan pelita
+Penyuluh di gelap gelita
+Pemandu ke puncak bahagia
+
+Andainya kamilah kembali
+Menyahut panggilan Ilahi
+Laguku biarlah ganti
+Di jiwamu hidup abadi
+Dialah temanmu sejati
+Menjagamu wahai Sazali
+
+Anakku Sazali dengarlah
+Lagu yang ayahanda karangi
+Sifatkan laguku hai anak
+Sebagai sahabatmu nanti`
+    };
+
+    const lyricsModal = document.getElementById('lyrics-modal');
+    const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+    const closeLyricsBtn = document.getElementById('close-lyrics');
+    const modalTitle = document.getElementById('modal-song-title');
+    const modalText = document.getElementById('modal-lyrics-text');
+
+    if (lyricsModal && lyricsButtons && closeLyricsBtn) {
+        lyricsButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const song = btn.getAttribute('data-song');
+                if (lyricsData[song]) {
+                    modalTitle.textContent = song;
+                    modalText.textContent = lyricsData[song];
+                    lyricsModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent background scroll
+                    
+                    // Stop the carousel slideshow when viewing lyrics
+                    if (typeof slideInterval !== 'undefined') {
+                        clearInterval(slideInterval);
+                    }
+                }
+            });
+        });
+
+        const closeLyrics = () => {
+            lyricsModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore background scroll
+        };
+
+        closeLyricsBtn.addEventListener('click', closeLyrics);
+        lyricsModal.addEventListener('click', (e) => {
+            if (e.target === lyricsModal) closeLyrics();
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lyricsModal.classList.contains('active')) {
+                closeLyrics();
+            }
+        });
+    }
+
 });

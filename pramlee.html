@@ -122,6 +122,9 @@
                     <div class="quote-slide active">
                         <blockquote>"Getaran jiwa, melanda hatiku..."</blockquote>
                         <span class="quote-author">Getaran Jiwa (1960)</span>
+                        <button class="lyrics-btn" data-song="Getaran Jiwa">
+                            <i class="music-icon">♪</i> <span>View Lyrics</span>
+                        </button>
                         <div class="audio-player vintage-player">
                             <div class="audio-info">
                                 <strong>Getaran Jiwa</strong>
@@ -136,6 +139,9 @@
                     <div class="quote-slide">
                         <blockquote>"Di mana kan ku cari ganti, serupa denganmu..."</blockquote>
                         <span class="quote-author">Di Mana Kan Ku Cari Ganti (1965)</span>
+                        <button class="lyrics-btn" data-song="Di Mana Kan Ku Cari Ganti">
+                            <i class="music-icon">♪</i> <span>View Lyrics</span>
+                        </button>
                         <div class="audio-player vintage-player">
                             <div class="audio-info">
                                 <strong>Di Mana Kan Ku Cari Ganti</strong>
@@ -149,6 +155,9 @@
                     <div class="quote-slide">
                         <blockquote>"Tunggu sekejap... biarlah bulan senyum di awan..."</blockquote>
                         <span class="quote-author">Tunggu Sekejap (1962)</span>
+                        <button class="lyrics-btn" data-song="Tunggu Sekejap">
+                            <i class="music-icon">♪</i> <span>View Lyrics</span>
+                        </button>
                         <div class="audio-player vintage-player">
                             <div class="audio-info">
                                 <strong>Tunggu Sekejap</strong>
@@ -162,6 +171,9 @@
                     <div class="quote-slide">
                         <blockquote>"Mari kita mencerita, kisah orang bujang..."</blockquote>
                         <span class="quote-author">Menceceh Bujang Lapok (1959)</span>
+                        <button class="lyrics-btn" data-song="Menceceh Bujang Lapok">
+                            <i class="music-icon">♪</i> <span>View Lyrics</span>
+                        </button>
                         <div class="audio-player vintage-player">
                             <div class="audio-info">
                                 <strong>Menceceh Bujang Lapok</strong>
@@ -175,6 +187,9 @@
                     <div class="quote-slide">
                         <blockquote>"Anakku Sazali... dengarlah ayahanda berpesan..."</blockquote>
                         <span class="quote-author">Anakku Sazali (1956)</span>
+                        <button class="lyrics-btn" data-song="Anakku Sazali">
+                            <i class="music-icon">♪</i> <span>View Lyrics</span>
+                        </button>
                         <div class="audio-player vintage-player">
                             <div class="audio-info">
                                 <strong>Anakku Sazali</strong>
@@ -506,6 +521,16 @@
     <footer>
         <p>&copy; 2026 Legendary Eras. A Tribute to the Masters.</p>
     </footer>
+
+    <!-- Lyrics Modal -->
+    <div id="lyrics-modal" class="lyrics-modal">
+        <div class="lyrics-content">
+            <button class="close-lyrics" id="close-lyrics">&times;</button>
+            <h2 id="modal-song-title" class="lyrics-title"></h2>
+            <p id="modal-song-artist" class="lyrics-artist">P. Ramlee</p>
+            <div id="modal-lyrics-text" class="lyrics-text"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
