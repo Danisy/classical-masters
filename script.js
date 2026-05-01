@@ -197,7 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.addEventListener('click', () => {
             clearInterval(slideInterval);
             showSlide(index);
-            startCarousel();
+            
+            // Only restart the automatic slideshow if no music is currently playing
+            const isAnyAudioPlaying = Array.from(audioPlayers).some(p => !p.paused);
+            if (!isAnyAudioPlaying) {
+                startCarousel();
+            }
         });
     });
 
