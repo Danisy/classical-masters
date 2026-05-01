@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     otherPlayer.pause();
                 }
             });
+
+            // Stop the carousel slideshow when music starts playing
+            if (typeof slideInterval !== 'undefined') {
+                clearInterval(slideInterval);
+            }
         });
     });
 
